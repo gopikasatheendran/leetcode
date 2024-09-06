@@ -1,0 +1,15 @@
+class Solution:
+    def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
+        (i,j)=0,0
+        for c in commands:
+            if c=="UP":
+                i-=1
+            if c=="DOWN":
+                i+=1
+            if c=="LEFT":
+                j-=1
+            if c  =="RIGHT":
+                j+=1
+        pos=(i*n)+j
+        return pos
+
